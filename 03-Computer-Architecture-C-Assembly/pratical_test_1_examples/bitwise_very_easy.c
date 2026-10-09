@@ -1,4 +1,4 @@
-#include <stdint.h>
+﻿#include <stdint.h>
 
 /* ==========================================================================
  * BITWISE VERY EASY (VE)
@@ -6,7 +6,7 @@
 
 /* --- Category: BASIC LOGICAL OPERATIONS ----------------------------------- */
 
-// VE-1 — VERY EASY — BITWISE
+// VE-1 - VERY EASY - BITWISE
 uint32_t bitwise_and(uint32_t a, uint32_t b){
 return a & b;
 }
@@ -15,7 +15,7 @@ return a & b;
    Example 1: bitwise_and(0x0F, 0x03) returns 0x03
 */
 
-// VE-2 — VERY EASY — BITWISE
+// VE-2 - VERY EASY - BITWISE
 uint32_t bitwise_or(uint32_t a, uint32_t b){
 return a | b;
 }
@@ -24,7 +24,7 @@ return a | b;
    Example 1: bitwise_or(0x01, 0x02) returns 0x03
 */
 
-// VE-3 — VERY EASY — BITWISE
+// VE-3 - VERY EASY - BITWISE
 uint32_t bitwise_not(uint32_t val){
 return ~val;
 }
@@ -36,7 +36,7 @@ return ~val;
 
 /* --- Category: SHIFTING --------------------------------------------------- */
 
-// VE-4 — VERY EASY — BITWISE
+// VE-4 - VERY EASY - BITWISE
 uint32_t shift_left_by_one(uint32_t val){
 return val << 1;
 }
@@ -45,7 +45,7 @@ return val << 1;
    Example 1: shift_left_by_one(0x05) returns 0x0A (10)
 */
 
-// VE-5 — VERY EASY — BITWISE
+// VE-5 - VERY EASY - BITWISE
 uint32_t shift_right_by_n(uint32_t val, int n){
 return val >> n;
 }
@@ -57,7 +57,7 @@ return val >> n;
 
 /* --- Category: ELEMENTARY MASKING ----------------------------------------- */
 
-// VE-1 — VERY EASY — BITWISE
+// VE-1 - VERY EASY - BITWISE
 int get_bit(uint32_t val, int n){
 return (val >> n) & 1;
 }
@@ -68,7 +68,7 @@ return (val >> n) & 1;
    Example 2: get_bit(0x08, 2) returns 0
 */
 
-// VE-2 — VERY EASY — BITWISE
+// VE-2 - VERY EASY - BITWISE
 uint32_t set_bit(uint32_t val, int n){
 return val | (1 << n);
 }
@@ -79,7 +79,7 @@ return val | (1 << n);
    Example 2: set_bit(0x01, 1) returns 0x03 (3)
 */
 
-// VE-3 — VERY EASY — BITWISE
+// VE-3 - VERY EASY - BITWISE
 uint32_t clear_bit(uint32_t val, int n){
 return val & ~(1 << n);
 }
@@ -90,7 +90,7 @@ return val & ~(1 << n);
    Example 2: clear_bit(0xFF, 7) returns 0x7F (127)
 */
 
-// VE-4 — VERY EASY — BITWISE
+// VE-4 - VERY EASY - BITWISE
 uint32_t toggle_bit(uint32_t val, int n){
 return val ^ (1 << n);
 }
@@ -102,7 +102,7 @@ return val ^ (1 << n);
 */
 
 
-// VE-6 — VERY EASY — BITWISE
+// VE-6 - VERY EASY - BITWISE
 uint32_t keep_lower_8_bits(uint32_t val){
 return val & 0xFF;
 }
@@ -112,7 +112,7 @@ return val & 0xFF;
    Example 1: keep_lower_8_bits(0xABCD1234) returns 0x00000034
 */
 
-// VE-7 — VERY EASY — BITWISE
+// VE-7 - VERY EASY - BITWISE
 int is_even_bitwise(int val){
 if(val & 1 == 0){
 return 1;
@@ -126,7 +126,7 @@ return 0;
    Example 2: is_even_bitwise(7) returns 0
 */
 
-// VE-8 — VERY EASY — BITWISE
+// VE-8 - VERY EASY - BITWISE
 uint32_t get_low_nibble(uint8_t val){
 return val & 0xF;
 }

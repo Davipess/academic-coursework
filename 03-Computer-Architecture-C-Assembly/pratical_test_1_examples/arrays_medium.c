@@ -1,11 +1,11 @@
-#include <stdint.h>
+﻿#include <stdint.h>
 #include <stddef.h>
 
 /* ==========================================================================
  * ARRAYS MEDIUM (M)
  * ========================================================================== */
 
-// M-1 — MEDIUM — ARRAYS
+// M-1 - MEDIUM - ARRAYS
 int count_unique(int *arr, int length)
 int unique_total = 0;
     for (int i = 0; i < length; i++) {
@@ -28,7 +28,7 @@ int unique_total = 0;
    Example 2: count_unique({1, 1, 1}, 3) returns 0
 */
 
-// M-2 — MEDIUM — ARRAYS
+// M-2 - MEDIUM - ARRAYS
 int longest_consecutive_run(int *arr, int length)
 if (length == 0) return 0;
     int max_run = 1;
@@ -55,7 +55,7 @@ if (length == 0) return 0;
    Example 2: longest_consecutive_run({1, 2, 3, 4}, 4) returns 1
 */
 
-// M-3 — MEDIUM — ARRAYS
+// M-3 - MEDIUM - ARRAYS
 int find_first_duplicate(int *arr, int length)
 // Ciclo i: Escolhe o número que vamos testar
     for (int i = 0; i < length; i++) {
@@ -76,7 +76,7 @@ int find_first_duplicate(int *arr, int length)
    Example 2: find_first_duplicate({1, 2, 3}, 3) returns -1
 */
 
-// M-4 — MEDIUM — ARRAYS
+// M-4 - MEDIUM - ARRAYS
 int count_peaks(int *arr, int length){
 int peak = 0;
 for(int i = 1; i < length - 1; i++){
@@ -94,7 +94,7 @@ return peak;
    Example 1: count_peaks({1, 3, 2, 5, 4}, 5) returns 2 (the values 3 and 5)
 */
 
-// M-5 — MEDIUM — ARRAYS
+// M-5 - MEDIUM - ARRAYS
 int is_subrange_sum_possible(int *arr, int length, int target){
 int sum = 0;
 for(int i = 0; i < length; i++){
@@ -114,7 +114,7 @@ return  0;
    Example 2: is_subrange_sum_possible({1, 2, 3, 4}, 4, 8) returns 0
 */
 
-// M-6 — MEDIUM — ARRAYS
+// M-6 - MEDIUM - ARRAYS
 int find_majority_element(int *arr, int length){
 int element = 0;
 int biggest = 0;
@@ -141,7 +141,7 @@ return element;
    Example 2: find_majority_element({1, 2, 3}, 3) returns -1
 */
 
-// M-7 — MEDIUM — ARRAYS
+// M-7 - MEDIUM - ARRAYS
 void array_diff_neighbors(int *arr, int length, int *result){
 result[0] = arr[0]
 
@@ -157,7 +157,7 @@ result[i] = arr[i] - arr[i-1]
    Example 1: arr {5, 8, 10, 7}, length 4 -> result {5, 3, 2, -3}
 */
 
-// M-8 — MEDIUM — ARRAYS
+// M-8 - MEDIUM - ARRAYS
 int count_strictly_increasing_pairs(int *arr, int length){
 count = 0;
 

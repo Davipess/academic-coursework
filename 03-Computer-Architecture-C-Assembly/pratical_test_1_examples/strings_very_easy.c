@@ -1,4 +1,4 @@
-#include <stdint.h>
+﻿#include <stdint.h>
 #include <stddef.h>
 
 /* ==========================================================================
@@ -7,7 +7,7 @@
 
 /* --- Category: BASIC INSPECTION ------------------------------------------- */
 
-// VE-1 — VERY EASY — STRINGS
+// VE-1 - VERY EASY - STRINGS
 char get_first_char(const char *str){
 return str[0];
 }
@@ -19,7 +19,7 @@ return str[0];
    Example 2: get_first_char(" Hello") returns ' '
 */
 
-// VE-2 — VERY EASY — STRINGS
+// VE-2 - VERY EASY - STRINGS
 int is_empty(const char *str){
 if(str[0] == '\0') {
    return 1;
@@ -36,7 +36,7 @@ return 0;
 
 /* --- Category: SIMPLE MODIFICATION ---------------------------------------- */
 
-// VE-3 — VERY EASY — STRINGS
+// VE-3 - VERY EASY - STRINGS
 void set_first_char(char *str, char c){
 str[0] = c;
 }
@@ -47,7 +47,7 @@ str[0] = c;
    Example 1: if str is "bat", set_first_char(str, 'c') results in "cat"
 */
 
-// VE-4 — VERY EASY — STRINGS
+// VE-4 - VERY EASY - STRINGS
 void clear_string(char *str){
 str[0] = '\0';
 }

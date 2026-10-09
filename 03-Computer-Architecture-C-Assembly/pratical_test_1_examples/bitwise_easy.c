@@ -1,4 +1,4 @@
-#include <stdint.h>
+﻿#include <stdint.h>
 
 /* ==========================================================================
  * BITWISE EASY (E)
@@ -6,7 +6,7 @@
 
 /* --- Category: NOT OPERATOR ----------------------------------------------- */
 
-// E-5 — EASY — BITWISE
+// E-5 - EASY - BITWISE
 int complement(int val){
 return ~val + 1;
 }
@@ -19,7 +19,7 @@ return ~val + 1;
 
 /* --- Category: FIELD EXTRACTION & MASKING --------------------------------- */
 
-// E-10 — EASY — BITWISE
+// E-10 - EASY - BITWISE
 uint8_t get_byte(uint32_t val, int n){
 return (val >> (n * 8)) & 0xFF;
 }
@@ -30,7 +30,7 @@ return (val >> (n * 8)) & 0xFF;
    Example 2: get_byte(0x12345678, 2) returns 0x34
 */
 
-// E-11 — EASY — BITWISE
+// E-11 - EASY - BITWISE
 uint32_t clear_lower_n_bits(uint32_t val, int n){
 return (val >> n) << n;
 }
@@ -43,7 +43,7 @@ return (val >> n) << n;
 
 /* --- Category: COUNTING & PROPERTIES -------------------------------------- */
 
-// E-6 — EASY — BITWISE
+// E-6 - EASY - BITWISE
 int count_set_bits(uint32_t val){
 int i = 0;
 int counter = 0;
@@ -61,7 +61,7 @@ return counter;
    Example 2: count_set_bits(0x80000001) returns 2
 */
 
-// E-7 — EASY — BITWISE
+// E-7 - EASY - BITWISE
 int is_power_of_two(uint32_t val){
 int i = 0;
 int counter = 0;
@@ -85,7 +85,7 @@ return 0;
 
 /* --- Category: COMPARISON & LOGIC ----------------------------------------- */
 
-// E-13 — EASY — BITWISE
+// E-13 - EASY - BITWISE
 int has_same_sign(int a, int b){
 if(a & (1 << 31) == b & (1 << 31)){
 return 1;
@@ -99,7 +99,7 @@ return 0;
    Example 2: has_same_sign(-5, 2) returns 0
 */
 
-// E-14 — EASY — BITWISE
+// E-14 - EASY - BITWISE
 int is_nth_bit_different(uint32_t a, uint32_t b, int n){
 if(a & (1 << n) != b & (1 << n)){
 return 1;
@@ -116,7 +116,7 @@ return 0;
 
 /* --- Category: BIT ROTATION ----------------------------------------------- */
 
-// E-15 — EASY — BITWISE
+// E-15 - EASY - BITWISE
 uint32_t rotate_left_one(uint32_t val){
 int saver = 0;
 
@@ -132,7 +132,7 @@ return (val << 1) ^ 1;
    Example 2: rotate_left_1(0x00000001) returns 0x00000002
 */
 
-// E-15 — EASY — BITWISE
+// E-15 - EASY - BITWISE
 uint32_t rotate_right_one(uint32_t val){
 int saver = 0;
 
@@ -151,7 +151,7 @@ return (val >> 1) ^ (1 << 31);
 
 
 
-// E-7 — EASY — BITWISE OPERATIONS
+// E-7 - EASY - BITWISE OPERATIONS
 int count_zero_bits(uint8_t byte){
 int i = 0;
 int counter = 0;
@@ -173,7 +173,7 @@ return counter;
 
 /* --- Category: DATA PACKING ----------------------------------------------- */
 
-// E-8 — EASY — BITWISE
+// E-8 - EASY - BITWISE
 uint8_t combine_nibbles(uint8_t high, uint8_t low){
 uint8_t result = 0;
 result = ((high << 4) | (low & 0x0F));
@@ -187,7 +187,7 @@ return result;
 */
 
 
-// E-8 — EASY — BITWISE
+// E-8 - EASY - BITWISE
 uint16_t combine_bytes(uint8_t high, uint8_t low){
 uint16_t result = 0;
 
@@ -225,7 +225,7 @@ void clear_upper_nibble(uint8_t *val){
 */
 
 
-// E-9 — EASY — BITWISE
+// E-9 - EASY - BITWISE
 uint16_t swap_endianness_16(uint16_t val){
 uint16_t upper = (val & 0xFF00) >> 8;
 uint16_t lower = (val & 0x00FF) << 8;
@@ -241,7 +241,7 @@ return result;
    Example 2: swap_endianness_16(0xAB00) returns 0x00AB
 */
 
-// E-16 — EASY — BITWISE
+// E-16 - EASY - BITWISE
 uint32_t pack_four_bytes(uint8_t b3, uint8_t b2, uint8_t b1, uint8_t b0){
 uint32_t result = (b3 << 24) | (b2 << 16) | (b1 << 8) | b0;
 

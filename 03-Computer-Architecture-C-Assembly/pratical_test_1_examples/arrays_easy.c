@@ -1,4 +1,4 @@
-#include <stdint.h>
+﻿#include <stdint.h>
 #include <stddef.h>
 
 /* ==========================================================================
@@ -7,7 +7,7 @@
 
 /* --- Category: MAX / MIN -------------------------------------------------- */
 
-// E-01 — EASY — ARRAYS
+// E-01 - EASY - ARRAYS
 int array_max(int *arr, int length){
 int i = 1;
 int max = arr[0];
@@ -27,7 +27,7 @@ return max;
    Example 2: array_max({-10, -3, -7}, 3) returns -3
 */
 
-// E-02 — EASY — ARRAYS
+// E-02 - EASY - ARRAYS
 int array_min(int *arr, int length){
 int i = 1;
 int min = arr[0];
@@ -47,7 +47,7 @@ return min;
    Example 2: array_min({-10, -3, -7}, 3) returns -10
 */
 
-// E-03 — EASY — ARRAYS
+// E-03 - EASY - ARRAYS
 int absolute_max(int *arr, int length){
     int max = arr[0];
     if (max < 0) {
@@ -75,7 +75,7 @@ int absolute_max(int *arr, int length){
    Example 2: absolute_max({-10, 2}, 2) returns 10
 */
 
-// E-04 — EASY — ARRAYS
+// E-04 - EASY - ARRAYS
 int find_min_index(int *arr, int length){
 int i = 1;
 int min = arr[0];
@@ -99,9 +99,9 @@ return index;
    Example 3: find_min_index({0, -5, -2, -5}, 4) returns 1
 */
 
-// E-05 — EASY — ARRAYS
+// E-05 - EASY - ARRAYS
 int find_max_index(int *arr, int length){
-// E-01 — EASY — ARRAYS
+// E-01 - EASY - ARRAYS
 int max = arr[0];
 index = i;
 
@@ -123,7 +123,7 @@ return index;
 
 /* --- Category: SUM / MEAN / PRODUCT --------------------------------------- */
 
-// E-06 — EASY — ARRAYS
+// E-06 - EASY - ARRAYS
 int array_sum(int *arr, int length){
 int sum = 0;
 
@@ -139,7 +139,7 @@ return sum;
    Example 2: array_sum({-1, 3, -5}, 3) returns -3
 */
 
-// E-07 — EASY — ARRAYS
+// E-07 - EASY - ARRAYS
 double array_mean(int *arr, int length){
 int sum = 0;
 
@@ -157,7 +157,7 @@ return (double) sum / length;
    Example 2: array_mean({0, -1, -2, 3}, 4) returns 0.0
 */
 
-// E-08 — EASY — ARRAYS
+// E-08 - EASY - ARRAYS
 int array_product(int *arr, int length)}
 
 int sum = 1;
@@ -174,7 +174,7 @@ return sum;
    Example 2: array_product({5, 0, 10}, 3) returns 0
 */
 
-// E-09 — EASY — ARRAYS
+// E-09 - EASY - ARRAYS
 int sum_even_indexed(int *arr, int length){
 int sum = 0;
 
@@ -190,7 +190,7 @@ return sum;
    Example 2: sum_even_indexed({1, 5, 2, 6}, 4) returns 3 (1+2)
 */
 
-// E-10 — EASY — ARRAYS
+// E-10 - EASY - ARRAYS
 int sum_odd_indexed(int *arr, int length){
 int sum = 0;
 
@@ -209,7 +209,7 @@ return sum;
 
 /* --- Category: COUNTING --------------------------------------------------- */
 
-// E-11 — EASY — ARRAYS
+// E-11 - EASY - ARRAYS
 int count_occurrences(int *arr, int length, int val){
 int counter = 0;
 for(int i = 0; i < length; i++){
@@ -227,7 +227,7 @@ return counter;
    Example 2: count_occurrences({1, 2, 3}, 3, 5) returns 0
 */
 
-// E-12 — EASY — ARRAYS
+// E-12 - EASY - ARRAYS
 int count_even(int *arr, int length){
     int counter = 0;
 
@@ -245,7 +245,7 @@ int count_even(int *arr, int length){
    Example 2: count_even({1, 3, 5}, 3) returns 0
 */
 
-// E-13 — EASY — ARRAYS
+// E-13 - EASY - ARRAYS
 int count_odd(int *arr, int length){
     int counter = 0;
 
@@ -264,7 +264,7 @@ int count_odd(int *arr, int length){
    Example 2: count_odd({1, 3, 5}, 3) returns 3
 */
 
-// E-14 — EASY — ARRAYS
+// E-14 - EASY - ARRAYS
 int count_negatives(int *arr, int length){
   int counter = 0;
 
@@ -285,7 +285,7 @@ int count_negatives(int *arr, int length){
    Example 2: count_negatives({1, 2, 3}, 3) returns 0
 */
 
-// E-15 — EASY — ARRAYS
+// E-15 - EASY - ARRAYS
 int count_positives(int *arr, int length);
 /* arr:       Pointer to the start of an integer array
    length:    Number of elements
@@ -294,7 +294,7 @@ int count_positives(int *arr, int length);
    Example 2: count_negatives({1, 2, 3}, 3) returns 3
 */
 
-// E-16 — EASY — ARRAYS
+// E-16 - EASY - ARRAYS
 int count_non_zero(int *arr, int length);
 /* arr:       Pointer to the start of an integer array
    length:    Number of elements
@@ -303,7 +303,7 @@ int count_non_zero(int *arr, int length);
    Example 2: count_non_zero({0, 0, 0}, 3) returns 0
 */
 
-// E-17 — EASY — ARRAYS
+// E-17 - EASY - ARRAYS
 int count_above_val(int *arr, int length, int val);
 /* arr:       Pointer to the start of an integer array
    length:    Number of elements
@@ -313,7 +313,7 @@ int count_above_val(int *arr, int length, int val);
    Example 2: count_above_val({1, 2, 3}, 3, 0) returns 3
 */
 
-// E-18 — EASY — ARRAYS
+// E-18 - EASY - ARRAYS
 int count_below_val(int *arr, int length, int val);
 /* arr:       Pointer to the start of an integer array
    length:    Number of elements
@@ -325,7 +325,7 @@ int count_below_val(int *arr, int length, int val);
 
 /* --- Category: SEARCH ----------------------------------------------------- */
 
-// E-19 — EASY — ARRAYS
+// E-19 - EASY - ARRAYS
 int find_index(int *arr, int length, int val){
 
 for(int i = 0; i < length; i++){
@@ -343,7 +343,7 @@ return -1;
    Example 2: find_index({1, 2, 3}, 3, 5) returns -1
 */
 
-// E-20 — EASY — ARRAYS
+// E-20 - EASY - ARRAYS
 int find_last_index(int *arr, int length, int val);
 /* arr:       Pointer to the start of an integer array
    length:    Number of elements
@@ -354,7 +354,7 @@ int find_last_index(int *arr, int length, int val);
    Example 2: find_last_index({1, 2, 3}, 3, 5) returns -1
 */
 
-// E-21 — EASY — ARRAYS
+// E-21 - EASY - ARRAYS
 int array_contains(int *arr, int length, int val);
 /* arr:       Pointer to the start of an integer array
    length:    Number of elements
@@ -366,7 +366,7 @@ int array_contains(int *arr, int length, int val);
 
 /* --- Category: PROPERTIES / SORTEDNESS ------------------------------------ */
 
-// E-22 — EASY — ARRAYS
+// E-22 - EASY - ARRAYS
 int is_sorted(int *arr, int length) {
     if (length < 2) return 1;
 
@@ -385,7 +385,7 @@ int is_sorted(int *arr, int length) {
    Example 2: is_sorted({3, 1, 4}, 3) returns 0
 */
 
-// E-23 — EASY — ARRAYS
+// E-23 - EASY - ARRAYS
 int is_strictly_increasing(int *arr, int length){
     if (length < 2) return 1;
 
@@ -405,7 +405,7 @@ int is_strictly_increasing(int *arr, int length){
    Example 2: is_strictly_increasing({1, 2, 2, 3}, 4) returns 0
 */
 
-// E-24 — EASY — ARRAYS
+// E-24 - EASY - ARRAYS
 int is_strictly_decreasing(int *arr, int length){
     if (length < 2) return 1;
 
@@ -425,7 +425,7 @@ int is_strictly_decreasing(int *arr, int length){
    Example 2: is_strictly_decreasing({5, 2, 2, 1}, 4) returns 0
 */
 
-// E-25 — EASY — ARRAYS
+// E-25 - EASY - ARRAYS
 int all_positive(int *arr, int length){
 
 if(length == 0){
@@ -446,7 +446,7 @@ return 1;
    Example 2: all_positive({1, -2, 3}, 3) returns 0
 */
 
-// E-26 — EASY — ARRAYS
+// E-26 - EASY - ARRAYS
 int any_negative(int *arr, int length);
 /* arr:       Pointer to the start of an integer array
    length:    Number of elements
@@ -455,7 +455,7 @@ int any_negative(int *arr, int length);
    Example 2: any_negative({1, 2, 3}, 3) returns 0
 */
 
-// E-27 — EASY — ARRAYS
+// E-27 - EASY - ARRAYS
 int is_constant(int *arr, int length){
 
 if(length == 0)
@@ -475,7 +475,7 @@ return 1;
    Example 2: is_constant({7, 8, 7}, 3) returns 0
 */
 
-// E-28 — EASY — ARRAYS
+// E-28 - EASY - ARRAYS
 int array_all_zero(int *arr, int length);
 /* arr:       Pointer to the start of an integer array
    length:    Number of elements

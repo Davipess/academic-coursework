@@ -1,4 +1,4 @@
-#include <stdint.h>
+﻿#include <stdint.h>
 
 /* ==========================================================================
  * BITWISE MEDIUM (M)
@@ -6,7 +6,7 @@
 
 /* --- Category: COUNTING & PROPERTIES -------------------------------------- */
 
-// M-7 — MEDIUM — BITWISE
+// M-7 - MEDIUM - BITWISE
 int get_highest_bit_set(uint32_t val){
 int i = 31;
 
@@ -25,7 +25,7 @@ i--;
 */
 
 
-// E-12 — EASY — BITWISE
+// E-12 - EASY - BITWISE
 uint32_t get_lowest_bit_set(uint32_t val){
 int i = 0;
 
@@ -108,7 +108,7 @@ unsigned long address = (unsigned long)ptr;
    Example 2: check_alignment_4((void*)0x1001) returns 0
 */
 
-// M-7 — MEDIUM — BITWISE
+// M-7 - MEDIUM - BITWISE
 int get_highest_bit_set(uint32_t val);
 /* val:     A 32-bit value
    returns: The index (0-31) of the most significant bit that is 1.
@@ -117,7 +117,7 @@ int get_highest_bit_set(uint32_t val);
    Example 2: get_highest_bit_set(0x01) returns 0
 */
 
-// TESTE 4 — ARRAYS
+// TESTE 4 - ARRAYS
 int is_palindrome_array(int *arr, int length){
 
    for(int i = 0; i < length - 1; i++; length--){
@@ -135,7 +135,7 @@ int is_palindrome_array(int *arr, int length){
    Example 2: {1, 2, 3, 4, 5}, length 5 -> returns 0
 */
 
-// TESTE 5 — BITWISE (MODIFIER)
+// TESTE 5 - BITWISE (MODIFIER)
 uint8_t invert_upper_nibble(uint8_t data){
    data = data ^ 0xF0;
 

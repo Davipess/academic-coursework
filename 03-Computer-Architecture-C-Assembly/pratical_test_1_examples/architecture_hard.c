@@ -1,4 +1,4 @@
-#include <stdint.h>
+﻿#include <stdint.h>
 #include <stddef.h>
 
 /* ==========================================================================
@@ -7,7 +7,7 @@
 
 /* --- Category: ENDIANNESS (BYTE ORDER) ------------------------------------ */
 
-// E-1 — EASY — ARCHITECTURE
+// E-1 - EASY - ARCHITECTURE
 int is_little_endian(void) {
     uint16_t valor = 0x0001;
     unsigned char *p = (unsigned char *)&valor;
@@ -25,7 +25,7 @@ int is_little_endian(void) {
    Example 2: On older PowerPC or SPARC architectures, returns 0
 */
 
-// E-2 — EASY — ARCHITECTURE
+// E-2 - EASY - ARCHITECTURE
 uint32_t swap_bytes_32(uint32_t val){
 uint32_t up1 = val & 0xFF000000;
 uint32_t up2 = val & 0x00FF0000;
@@ -43,7 +43,7 @@ val = (low2 << 24) | (low1 << 8) | (up2 >> 8) | (up1 >> 24);
 
 /* --- Category: ALIGNMENT & PADDING ---------------------------------------- */
 
-// E-3 — EASY — ARCHITECTURE
+// E-3 - EASY - ARCHITECTURE
 unsigned int get_padding_size(void);
 /* returns: The amount of padding bytes in a specific structure
    Notes:   Define a struct { char a; int b; }. Return the difference 
@@ -52,7 +52,7 @@ unsigned int get_padding_size(void);
    Example 2: If the structure is strictly packed (__attribute__((packed))), returns 0
 */
 
-// E-4 — EASY — ARCHITECTURE
+// E-4 - EASY - ARCHITECTURE
 int is_aligned(void *ptr, unsigned int alignment);
 /* ptr:       A memory address
    alignment: A power of two (2, 4, 8, 16...)
@@ -64,7 +64,7 @@ int is_aligned(void *ptr, unsigned int alignment);
 
 /* --- Category: POINTER ARITHMETIC & TYPES --------------------------------- */
 
-// E-5 — EASY — ARCHITECTURE
+// E-5 - EASY - ARCHITECTURE
 int pointer_distance_bytes(void *p1, void *p2);
 /* p1, p2:  Two memory addresses
    returns: The number of bytes between p2 and p1 (p2 - p1)
@@ -73,7 +73,7 @@ int pointer_distance_bytes(void *p1, void *p2);
    Example 2: p1=(void*)0x1008, p2=(void*)0x1000 returns -8
 */
 
-// E-6 — EASY — ARCHITECTURE
+// E-6 - EASY - ARCHITECTURE
 void write_at_offset(void *base, int offset, uint8_t value);
 /* base:    Base memory address
    offset:  Number of bytes to move from base
@@ -85,7 +85,7 @@ void write_at_offset(void *base, int offset, uint8_t value);
 
 /* --- Category: STRUCTURES & OFFSETS --------------------------------------- */
 
-// E-7 — EASY — ARCHITECTURE
+// E-7 - EASY - ARCHITECTURE
 unsigned int offset_of_member(void);
 /* returns: The byte offset of member 'c' within a structure
    Notes:   Define struct { char a; char b; int c; }. 
@@ -96,7 +96,7 @@ unsigned int offset_of_member(void);
 
 /* --- Category: MEMORY LAYOUT & PUNNING ------------------------------------ */
 
-// E-9 — EASY — ARCHITECTURE
+// E-9 - EASY - ARCHITECTURE
 unsigned int get_pointer_size(void);
 /* returns: The size of a memory address pointer in bytes
    Notes:   Use sizeof on a void pointer. This helps determine if the compiled 
@@ -105,7 +105,7 @@ unsigned int get_pointer_size(void);
    Example 2: On a 64-bit architecture, returns 8
 */
 
-// E-10 — EASY — ARCHITECTURE
+// E-10 - EASY - ARCHITECTURE
 uint32_t float_to_raw_bits(float f);
 /* f:       A floating-point value
    returns: The exact IEEE-754 bit representation of the float as an integer
@@ -115,7 +115,7 @@ uint32_t float_to_raw_bits(float f);
    Example 2: float_to_raw_bits(1.0f) returns 0x3F800000
 */
 
-// E-11 — EASY — ARCHITECTURE
+// E-11 - EASY - ARCHITECTURE
 uint8_t get_memory_byte(void *ptr, int index);
 /* ptr:     A pointer to any data type
    index:   The byte offset to read
@@ -127,7 +127,7 @@ uint8_t get_memory_byte(void *ptr, int index);
 
 /* --- Category: ADVANCED ALIGNMENT ----------------------------------------- */
 
-// E-12 — EASY — ARCHITECTURE
+// E-12 - EASY - ARCHITECTURE
 unsigned int align_up(unsigned int size, unsigned int alignment);
 /* size:      The original size in bytes
    alignment: The required alignment boundary (a power of 2, like 4 or 8)
@@ -136,7 +136,7 @@ unsigned int align_up(unsigned int size, unsigned int alignment);
    Example 2: align_up(16, 8) returns 16
 */
 
-// E-13 — EASY — ARCHITECTURE
+// E-13 - EASY - ARCHITECTURE
 void* get_array_element_address(void *base, unsigned int elem_size, int index);
 /* base:      The starting address of an array
    elem_size: The size of a single element in bytes
@@ -147,7 +147,7 @@ void* get_array_element_address(void *base, unsigned int elem_size, int index);
    Example 2: base=(void*)0x1000, elem_size=1, index=5 returns (void*)0x1005
 */
 
-// E-14 — EASY — ARCHITECTURE
+// E-14 - EASY - ARCHITECTURE
 ptrdiff_t struct_member_distance(void *member1, void *member2);
 /* member1: A pointer to the first member in a structure
    member2: A pointer to the second member in the same structure
@@ -158,7 +158,7 @@ ptrdiff_t struct_member_distance(void *member1, void *member2);
 
 /* --- Category: BUFFER MANIPULATION ---------------------------------------- */
 
-// E-15 — EASY — ARCHITECTURE
+// E-15 - EASY - ARCHITECTURE
 uint32_t read_unaligned_32_le(const uint8_t *buffer);
 /* buffer:  A pointer to an array of bytes (might not be 4-byte aligned)
    returns: A 32-bit integer reconstructed from the bytes assuming Little Endian order
@@ -168,7 +168,7 @@ uint32_t read_unaligned_32_le(const uint8_t *buffer);
    Example 2: buffer={0xFF, 0x00, 0x00, 0x00} returns 0x000000FF
 */
 
-// E-16 — EASY — ARCHITECTURE
+// E-16 - EASY - ARCHITECTURE
 int memory_regions_overlap(void *start1, unsigned int len1, void *start2, unsigned int len2);
 /* start1, len1: Base address and length of the first memory block
    start2, len2: Base address and length of the second memory block
@@ -178,7 +178,7 @@ int memory_regions_overlap(void *start1, unsigned int len1, void *start2, unsign
    Example 2: start1=0x1000, len1=10, start2=0x1010, len2=5 returns 0
 */
 
-// E-17 — EASY — ARCHITECTURE
+// E-17 - EASY - ARCHITECTURE
 uint32_t swap_halves_32(uint32_t val);
 /* val:     A 32-bit unsigned integer
    returns: The value with its upper 16 bits swapped with its lower 16 bits
@@ -186,7 +186,7 @@ uint32_t swap_halves_32(uint32_t val);
    Example 2: swap_halves_32(0x0000FFFF) returns 0xFFFF0000
 */
 
-// E-18 — EASY — ARCHITECTURE
+// E-18 - EASY - ARCHITECTURE
 void swap_pointers(void **ptr1, void **ptr2);
 /* ptr1:    Pointer to the first pointer variable
    ptr2:    Pointer to the second pointer variable
@@ -201,7 +201,7 @@ void swap_pointers(void **ptr1, void **ptr2);
 
 
 
-// TESTE 1 — ARRAYS / LOOPS
+// TESTE 1 - ARRAYS / LOOPS
 int count_target_pairs(int *arr, int length, int target){
 
 for(int i = 0; i < length; i++){
@@ -226,7 +226,7 @@ return coutn;
 
 
 
-// TESTE 2 — BITWISE (SCANNER)
+// TESTE 2 - BITWISE (SCANNER)
 int count_zero_bits(uint8_t data){
 int i = 0;
 int count = 0;
@@ -245,7 +245,7 @@ return count;
    Example 2: count_zero_bits(0x02) returns 7 (binary 00000010)
 */
 
-// TESTE 3 — BITWISE (PUZZLE)
+// TESTE 3 - BITWISE (PUZZLE)
 uint16_t extract_middle_16(uint32_t val){
 uint16_t result = 0;
 

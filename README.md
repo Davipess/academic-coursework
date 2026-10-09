@@ -1,41 +1,40 @@
-# 🎓 Academic Coursework — Computer Science Foundations
-**BSc in Computer Science | FCT NOVA** (2025 – Present)
+# Academic Coursework
 
-This repository contains practical projects, laboratory assignments, and exercises developed during my Computer Science degree, focusing on core programming paradigms, software design, and low-level computer systems.
+Coursework and laboratory exercises for the BSc in Computer Science and Engineering at NOVA SST (2025 - Present).
 
----
+## Status
 
-## 📌 Course Modules & Core Skills
+Private repository. Kept private to comply with university academic integrity policies regarding public assignment solutions.
 
-### 1. Introduction to Programming (IP) — `Java`
-* **Foundations:** Procedural logic, control flow, arrays, functions, and structured problem solving in Java.
-* **Key Focus:** Building solid algorithmic intuition and clean syntax from day one.
+## What It Contains
 
-### 2. Object-Oriented Programming (POO) — `Java`
-* **Concepts:** Encapsulation, inheritance, polymorphism, abstract classes, interfaces, and custom exception handling.
-* **Architecture:** Layered software design separating domain entities, controller/service logic, and standard I/O interaction.
-* **Featured Projects:** Multi-user social network simulations, supermarket order managers, and cloud file-sharing services.
+- Introduction to Programming (IP): procedural logic, control flow, arrays, and problem-solving exercises in Java.
+- Object-Oriented Programming (POO): SOLID principles, inheritance hierarchies, custom checked exceptions, and the YouVideo project in Java.
+- Computer Architecture (AC): C programming, memory addressing, and instruction-level RISC-V assembly programs.
 
-### 3. Computer Architecture (AC) — `C` & `RISC-V Assembly`
-* **Low-Level Systems:** Memory layouts, pointers, stack frames, register calling conventions, and datapath execution.
-* **Implementations:** Array manipulations, sorting algorithms, and bitwise arithmetic implemented directly in RISC-V assembly and C.
+## How I Built It
 
----
+I completed these assignments individually as part of my coursework at NOVA School of Science and Technology. All solutions were developed according to the project specifications and coding standards provided by the faculty.
 
-## 🛠️ Core Tooling
-`Java 21` • `C` • `RISC-V Assembly` • `JUnit` • `Git` • `Linux / CLI`
+## Tech Stack
 
----
+- Java 21
+- C
+- RISC-V Assembly
+- JUnit 5
 
-<details>
-<summary><b>🇵🇹 Versão em Português</b></summary>
+## How to Run
 
-### 🎓 Trabalhos Curriculares — Fundamentos de Engenharia Informática
-**Licenciatura em Engenharia Informática | FCT NOVA** (2025 – Presente)
+Projects are organized by course module. Individual Java assignments can be compiled and run using standard JDK tools or opened directly in IntelliJ IDEA.
 
-Este repositório reúne os projetos práticos e exercícios desenvolvidos ao longo da licenciatura, com foco em paradigmas de programação, desenho orientado a objetos e sistemas de baixo nível.
+## Tests
 
-* **Introdução à Programação (Java):** Lógica estruturada, vetores, funções e resolução algorítmica de problemas em Java puro.
-* **Programação Orientada a Objetos (Java):** Modelação de domínio, encapsulamento, polimorfismo, interfaces e separação em camadas.
-* **Arquitetura de Computadores (C e RISC-V):** Gestão de memória, ponteiros, chamadas de sistema e algoritmos otimizados ao nível de instruções máquina.
-</details>
+Course projects with automated test suites include JUnit test classes within their respective project folders.
+
+## Limitations and Future Use
+
+This repository is kept private pending confirmation of department guidelines regarding public code sharing. If public access is restored in the future, only assignments explicitly permitted by course instructors will be published.
+
+## License
+
+All rights reserved. Academic work submitted for degree coursework at NOVA SST.

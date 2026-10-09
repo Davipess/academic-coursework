@@ -1,4 +1,4 @@
-#include <stdint.h>
+﻿#include <stdint.h>
 #include <stddef.h>
 
 /* ==========================================================================
@@ -7,7 +7,7 @@
 
 /* --- Category: INSPECTION & SEARCH ---------------------------------------- */
 
-// E-1 — EASY — STRINGS
+// E-1 - EASY - STRINGS
 unsigned int string_length(const char *str){
 int i = 0;
 
@@ -24,7 +24,7 @@ return i;
    Example 2: string_length("") returns 0
 */
 
-// E-2 — EASY — STRINGS
+// E-2 - EASY - STRINGS
 int count_char(const char *str, char c){
 int i = 0;
 int counter = 0;
@@ -44,7 +44,7 @@ return counter;
    Example 2: count_char("banana", 'z') returns 0
 */
 
-// E-3 — EASY — STRINGS
+// E-3 - EASY - STRINGS
 int count_digits(const char *str){
 int i = 0;
 int counter = 0;
@@ -63,7 +63,7 @@ return counter;
    Example 2: count_digits("Hello") returns 0
 */
 
-// E-4 — EASY — STRINGS
+// E-4 - EASY - STRINGS
 int count_vowels(const char *str) {
     int counter = 0;
     int i = 0;
@@ -96,7 +96,7 @@ int count_vowels(const char *str) {
    Example 2: count_vowels("Sky") returns 0
 */
 
-// E-5 — EASY — STRINGS
+// E-5 - EASY - STRINGS
 int count_uppercase(const char *str){
 int i = 0;
 int counter = 0;
@@ -116,7 +116,7 @@ return counter;
    Example 2: count_uppercase("lowercase") returns 0
 */
 
-// E-6 — EASY — STRINGS
+// E-6 - EASY - STRINGS
 int find_first_occurrence(const char *str, char c){
 int i = 0;
 
@@ -136,7 +136,7 @@ return -1;
    Example 2: find_first_occurrence("apple", 'z') returns -1
 */
 
-// E-7 — EASY — STRINGS
+// E-7 - EASY - STRINGS
 int find_last_occurrence(const char *str, char c){
 int i = 0;
 int holder = -1;
@@ -156,7 +156,7 @@ return holder;
    Example 2: find_last_occurrence("banana", 'b') returns 0
 */
 
-// E-8 — EASY — STRINGS
+// E-8 - EASY - STRINGS
 int contains_substring(const char *str, const char *sub) {
     if (sub[0] == '\0') {
         return 1;
@@ -182,7 +182,7 @@ int contains_substring(const char *str, const char *sub) {
    Example 2: contains_substring("apple", "banana") returns 0
 */
 
-// E-9 — EASY — STRINGS
+// E-9 - EASY - STRINGS
 int strings_are_equal(const char *s1, const char *s2){
 int i = 0;
 
@@ -202,7 +202,7 @@ return 0;
    Example 2: strings_are_equal("abc", "abd") returns 0
 */
 
-// E-10 — EASY — STRINGS
+// E-10 - EASY - STRINGS
 int is_palindrome(const char *str){
 int i = 0;
 int j = 0;
@@ -228,7 +228,7 @@ return 0;
 
 /* --- Category: MODIFICATION & TRANSFORM ----------------------------------- */
 
-// E-11 — EASY — STRINGS
+// E-11 - EASY - STRINGS
 void to_uppercase(char *str){
 int i = 0;
 while(i != '\0'){
@@ -247,7 +247,7 @@ i++
    Example 2: if str is "Hello!", to_uppercase(str) results in "HELLO!"
 */
 
-// E-12 — EASY — STRINGS
+// E-12 - EASY - STRINGS
 void to_lowercase(char *str){
 
 int i = 0;
@@ -266,7 +266,7 @@ i++
    Example 2: if str is "123-ABC", to_lowercase(str) results in "123-abc"
 */
 
-// E-13 — EASY — STRINGS
+// E-13 - EASY - STRINGS
 void toggle_case(char *str){
 int i = 0;
 while(i != '\0'){
@@ -287,7 +287,7 @@ i++
    Example 2: if str is "123!", toggle_case(str) results in "123!"
 */
 
-// E-14 — EASY — STRINGS
+// E-14 - EASY - STRINGS
 void censor_vowels(char *str){
 int i = 0
 
@@ -318,7 +318,7 @@ i++
    Example 2: if str is "fly", censor_vowels(str) results in "fly"
 */
 
-// E-15 — EASY — STRINGS
+// E-15 - EASY - STRINGS
 void trim_trailing_whitespace(char *str){
 int i = 0;
 
@@ -344,7 +344,7 @@ break;
    Example 2: if str is "test", trim_trailing_whitespace(str) results in "test"
 */
 
-// E-16 — EASY — STRINGS
+// E-16 - EASY - STRINGS
 void reverse_string_inplace(char *str){
 int i = 0;
 int j = 0;
@@ -371,7 +371,7 @@ i--;
    Example 2: if str is "radar", reverse_string_inplace(str) results in "radar"
 */
 
-// E-17 — EASY — STRINGS
+// E-17 - EASY - STRINGS
 void remove_all_spaces(char *str);
 /* str:     Pointer to a null-terminated string
    returns: nothing
@@ -383,7 +383,7 @@ void remove_all_spaces(char *str);
 
 /* --- Category: BUFFER MANIPULATION ---------------------------------------- */
 
-// E-18 — EASY — STRINGS
+// E-18 - EASY - STRINGS
 void append_char(char *str, char c){
 int i = 0;
 
@@ -403,7 +403,7 @@ str[i+1] = '\0';
    Example 2: if str is "", append_char(str, 'A') results in "A"
 */
 
-// E-19 — EASY — STRINGS
+// E-19 - EASY - STRINGS
 void remove_last_char(char *str){
 int i = 0;
 
@@ -423,7 +423,7 @@ str[i-1] = '\0';
    Example 2: if str is "A", remove_last_char(str) results in ""
 */
 
-// E-20 — EASY — STRINGS
+// E-20 - EASY - STRINGS
 void string_copy(char *dest, const char *src){
 int i = 0;
 
@@ -443,7 +443,7 @@ dest[i] = '\0';
    Example 2: string_copy(buffer, "") results in buffer becoming ""
 */
 
-// E-21 — EASY — STRINGS
+// E-21 - EASY - STRINGS
 void string_concat(char *dest, const char *src){
 int i = 0;
 int j = 0;
@@ -466,7 +466,7 @@ dest[i+j] = '\0';
    Example 2: if dest is "A", concat(dest, "B") results in "AB"
 */
 
-// E-22 — EASY — STRINGS
+// E-22 - EASY - STRINGS
 void string_n_copy(char *dest, const char *src, unsigned int n){
 int i = 0;
 
@@ -491,7 +491,7 @@ i++;
 
 /* --- Category: NUMERIC CONVERSION ----------------------------------------- */
 
-// E-23 — EASY — STRINGS
+// E-23 - EASY - STRINGS
 int digit_to_int(char c){
 if (c >= '0' && c <= '9') {
         return c - '0'; // A manha é subtrair o carácter '0'
@@ -506,7 +506,7 @@ if (c >= '0' && c <= '9') {
    Example 2: digit_to_int('a') returns -1
 */
 
-// E-24 — EASY — STRINGS
+// E-24 - EASY - STRINGS
 char int_to_digit(int val);
 /* val:     An integer 0-9
    returns: The character '0'-'9', or '\0' if out of range
@@ -515,7 +515,7 @@ char int_to_digit(int val);
    Example 2: int_to_digit(10) returns '\0'
 */
 
-// E-25 — EASY — STRINGS
+// E-25 - EASY - STRINGS
 int string_to_int(const char *str);
 /* str:     Pointer to a string of digits (e.g., "123")
    returns: The represented integer
@@ -527,7 +527,7 @@ int string_to_int(const char *str);
 
 /* --- Category: CHARACTER CHECKS ------------------------------------------- */
 
-// E-26 — EASY — STRINGS
+// E-26 - EASY - STRINGS
 int is_alpha(char c){
 if(c >= 'a' && c <= 'z' || c >= 'A' && c<= 'Z'){
 return 1;
@@ -541,7 +541,7 @@ return 0;
    Example 2: is_alpha('!') returns 0
 */
 
-// E-27 — EASY — STRINGS
+// E-27 - EASY - STRINGS
 int is_digit(char c);
 /* c:       A character
    returns: 1 if '0'-'9', 0 otherwise
@@ -550,7 +550,7 @@ int is_digit(char c);
    Example 2: is_digit('a') returns 0
 */
 
-// E-28 — EASY — STRINGS
+// E-28 - EASY - STRINGS
 int is_lower(char c);
 /* c:       A character
    returns: 1 if 'a'-'z', 0 otherwise
@@ -559,7 +559,7 @@ int is_lower(char c);
    Example 2: is_lower('A') returns 0
 */
 
-// E-29 — EASY — STRINGS
+// E-29 - EASY - STRINGS
 int count_words_by_spaces(const char *str);
 /* str:     Pointer to a null-terminated string
    returns: The number of words (sequences of non-space characters)
@@ -569,7 +569,7 @@ int count_words_by_spaces(const char *str);
    Example 2: count_words_by_spaces("test") returns 1
 */
 
-// E-30 — EASY — STRINGS
+// E-30 - EASY - STRINGS
 char get_last_char(const char *str);
 /* str:     Pointer to a null-terminated string
    returns: The last character before the null terminator, or '\0' if empty
@@ -578,7 +578,7 @@ char get_last_char(const char *str);
    Example 2: get_last_char("") returns '\0'
 */
 
-// E-31 — EASY — STRINGS
+// E-31 - EASY - STRINGS
 void replace_char(char *str, char old_c, char new_c);
 /* str:     Pointer to a null-terminated string
    old_c:   The character to be replaced
