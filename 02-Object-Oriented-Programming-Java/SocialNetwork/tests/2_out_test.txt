@@ -1,0 +1,18 @@
+Successfully registered.
+List of registered users:
+Luis; luis@gmail.com
+Successfully registered.
+List of registered users:
+Luis; luis@gmail.com
+Maria; maria@gmail.com
+Not registered.
+Already registered.
+Friendship created.
+Friendship already exists.
+Friends list:
+Luis; luis@gmail.com
+Friends list:
+Maria; maria@gmail.com
+A estudar...
+Status updated.
+Bye.

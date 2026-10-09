@@ -1,0 +1,30 @@
+REGISTER
+Luis
+luis@gmail.com
+A estudar...
+USERS
+REGISTER
+Maria
+maria@gmail.com
+A trabalhar...
+USERS
+REGISTERED
+Bruno
+REGISTERED
+Maria
+ADDFRIEND
+Luis
+Maria
+ADDFRIEND
+Maria
+Luis
+FRIENDS
+Maria
+FRIENDS
+Luis
+CHECKSTATUS
+Luis
+NEWSTATUS
+Maria
+Boa tarde!
+QUIT

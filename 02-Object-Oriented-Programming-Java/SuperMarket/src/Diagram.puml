@@ -1,0 +1,120 @@
+@startuml
+
+interface SuperMarket {
+    + newCart(cartId: String, capacity: int): void
+    + newItem(name: String, price: int, volume: int): void
+    + addItem(itemName: String, cartId: String): void
+    + removeItem(itemName: String, cartId: String): void
+    + getCartItemsIterator(cartId: String): Iterator<Item>
+    + pay(cartId: String): int
+}
+
+interface Cart {
+    + addItemToCart(item: Item): void
+    + removeItemFromCart(item: Item): void
+    + pay(): int
+    + iterator(): Iterator<Item>
+}
+
+interface Item {
+    + name(): String
+    + price(): int
+    + volume(): int
+}
+
+class Main {
+    + {static} main(args: String[]): void
+    - {static} executeCommand(sc: Scanner, sp: SuperMarket): void
+    + {static} createNewCart(sc: Scanner, sp: SuperMarket): void
+    + {static} createNewItem(sc: Scanner, sp: SuperMarket): void
+    + {static} addItem(sc: Scanner, sp: SuperMarket): void
+    + {static} removeItem(sc: Scanner, sp: SuperMarket): void
+    - {static} listItems(sc: Scanner, sp: SuperMarket): void
+    + {static} payCart(sc: Scanner, sp: SuperMarket): void
+    + {static} setExit(): void
+}
+
+enum Messages {
+    CART_ALREADY_EXIST_MSG
+    CART_ADDED_MSG
+    ITEM_ADDED_MSG
+    ITEM_ALREADY_EXIST
+    ITEM_NOT_EXIST
+    CART_NOT_EXIST
+    CAPACITY_EXCEEDED
+    ITEM_REMOVED_SUCESSFULLY
+    ITEM_IS_NOT_IN_CART
+    EMPTY_CART
+    BYE_MSG
+    NEW
+    CART
+    ITEM
+    ADD
+    REMOVE
+    LIST
+    PAY
+    EXIT
+    - message: String
+    + getMessage(): String
+}
+
+class SuperMarketClass {
+    - cart: HashMap<String, Cart>
+    - items: HashMap<String, Item>
+    + SuperMarketClass()
+    + newCart(cartId: String, capacity: int): void
+    + newItem(name: String, price: int, volume: int): void
+    + addItem(itemName: String, cartId: String): void
+    + removeItem(itemName: String, cartId: String): void
+    + getCartItemsIterator(cartId: String): Iterator<Item>
+    + pay(cartId: String): int
+}
+
+class CartClass {
+    - cartId: String
+    - capacity: int
+    - items: LinkedList<Item>
+    - currentCapacity: int
+    + CartClass(cartId: String, capacity: int)
+    + addItemToCart(item: Item): void
+    + removeItemFromCart(item: Item): void
+    + pay(): int
+    + iterator(): Iterator<Item>
+}
+
+class ItemClass {
+    - name: String
+    - price: int
+    - volume: int
+}
+
+package Exceptions {
+    class CartAlreadyExistsException extends Exception
+    class ItemAlreadyExistsException extends Exception
+    class NonExistingCartException extends Exception
+    class NonExistingItemException extends Exception
+    class CapacityExceededException extends Exception
+    class ItemNotInCartException extends Exception
+    class EmptyCartException extends Exception
+}
+
+Main -right-> SuperMarket : "uses"
+Main -down-> Messages : "uses"
+
+SuperMarket -right[hidden]-> Cart
+Cart -right[hidden]-> Item
+
+SuperMarketClass .up.|> SuperMarket
+CartClass .up.|> Cart
+ItemClass .up.|> Item
+
+SuperMarketClass -right[hidden]-> CartClass
+CartClass -right[hidden]-> ItemClass
+
+SuperMarketClass *-up-> Cart : "HashMap<String, Cart>"
+SuperMarketClass *-up-> Item : "HashMap<String, Item>"
+CartClass o-up-> Item : "LinkedList<Item>"
+
+SuperMarketClass -down[hidden]-> Exceptions
+
+@enduml

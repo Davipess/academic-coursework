@@ -1,0 +1,41 @@
+USERS
+REGISTER
+Ze
+ze@gmail.com
+Com sono
+USERS
+REGISTER
+Maria
+maria@gmail.com
+Ainda mais sono
+USERS
+REGISTERED
+Ambrosio
+REGISTERED
+Ze
+ADDFRIEND
+Ze
+Maria
+FRIENDS
+Ze
+CHECKSTATUS
+Ze
+NEWSTATUS
+Ze
+Vai dormir!
+REGISTER
+Ambrosio
+ambrosio@gmail.com
+Tem sede
+ADDFRIEND
+Ze
+Ambrosio
+FRIENDS
+Ze
+CHECKFRIENDSHIP
+Ambrosio
+Maria
+ADDFRIEND
+Ambrosio
+Ze
+QUIT

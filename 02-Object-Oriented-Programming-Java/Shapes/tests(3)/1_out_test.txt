@@ -1,0 +1,36 @@
+Without geometric shapes.
+A new CIRCLE was added.
+Identifier already exists.
+A new RECTANGLE was added.
+Identifier already exists.
+A new CIRCLE was added.
+A new CIRCLE was added.
+A new RECTANGLE was added.
+A new RECTANGLE was added.
+Identifier already exists.
+All shapes:
+circle1 (0, 0) CIRCLE
+rectangle1 (0, 7) RECTANGLE
+circle2 (4, 2) CIRCLE
+circle3 (-1, 0) CIRCLE
+rectangle2 (-1, 4) RECTANGLE
+rectangle3 (6, 7) RECTANGLE
+All shapes:
+circle1 (0, 0) CIRCLE
+circle2 (4, 2) CIRCLE
+circle3 (-1, 0) CIRCLE
+All shapes:
+rectangle1 (0, 7) RECTANGLE
+rectangle2 (-1, 4) RECTANGLE
+rectangle3 (6, 7) RECTANGLE
+Shape was moved.
+Identifier does not exist.
+Shape was moved.
+All shapes:
+circle1 (0, 0) CIRCLE
+rectangle1 (0, 7) RECTANGLE
+circle2 (4, 2) CIRCLE
+circle3 (4, 4) CIRCLE
+rectangle2 (-3, -9) RECTANGLE
+rectangle3 (6, 7) RECTANGLE
+Exiting...

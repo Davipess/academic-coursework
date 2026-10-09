@@ -1,0 +1,21 @@
+ADD CIRCLE
+circle1 0 0 12
+ADD RECTANGLE
+rectangle1 0 7 2 8
+ADD RECTANGLE
+rectangle2 -1 4 2 78
+ADD CIRCLE
+circle2 4 2 2
+ADD RECTANGLE
+rectangle3 6 7 4 9
+ADD CIRCLE
+circle3 -1 0 5
+ADD RECTANGLE
+rectangle3 -1 0 23 9
+LIST
+MOVE circle3 4 4
+MOVE rectangle2 -3 -9
+MINAREA
+LIST CIRCLE
+LIST RECTANGLE
+EXIT

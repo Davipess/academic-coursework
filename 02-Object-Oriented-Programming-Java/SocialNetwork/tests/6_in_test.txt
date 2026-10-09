@@ -1,0 +1,20 @@
+USERS
+REGISTER
+Joao
+joao@gmail.com
+Eu sou o Joao!
+NEWSTATUS
+Joao
+Eu nao sou o Joao!
+CHECKSTATUS
+Joao
+ADDFRIEND
+Joao
+Joao
+REGISTER
+Joao Pinto
+joao@gmail.com
+Eu sou o Joao Pinto e estou a testar se as pessoas podem ter mais do que um nome!
+CHECKSTATUS
+Joao Pinto
+QUIT

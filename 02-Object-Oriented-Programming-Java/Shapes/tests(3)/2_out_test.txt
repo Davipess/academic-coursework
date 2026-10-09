@@ -1,0 +1,26 @@
+A new CIRCLE was added.
+A new RECTANGLE was added.
+A new RECTANGLE was added.
+A new CIRCLE was added.
+A new RECTANGLE was added.
+A new CIRCLE was added.
+Identifier already exists.
+All shapes:
+circle1 (0, 0) CIRCLE
+rectangle1 (0, 7) RECTANGLE
+rectangle2 (-1, 4) RECTANGLE
+circle2 (4, 2) CIRCLE
+rectangle3 (6, 7) RECTANGLE
+circle3 (-1, 0) CIRCLE
+Shape was moved.
+Shape was moved.
+circle2 (4, 2) CIRCLE
+All shapes:
+circle1 (0, 0) CIRCLE
+circle2 (4, 2) CIRCLE
+circle3 (4, 4) CIRCLE
+All shapes:
+rectangle1 (0, 7) RECTANGLE
+rectangle2 (-3, -9) RECTANGLE
+rectangle3 (6, 7) RECTANGLE
+Exiting...

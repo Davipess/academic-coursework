@@ -1,0 +1,12 @@
+Empty social network.
+Successfully registered.
+Already registered.
+Eu sou o Joao!
+Already registered.
+No registered friends.
+Not registered.
+No registered friends.
+Non-existent friendship.
+Non-existent friendship.
+Non-existent friendship.
+Bye.

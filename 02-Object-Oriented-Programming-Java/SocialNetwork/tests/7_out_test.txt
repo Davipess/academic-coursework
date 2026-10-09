@@ -1,0 +1,30 @@
+Empty social network.
+Successfully registered.
+Already registered.
+Successfully registered.
+Non-existent friendship.
+Already registered.
+Not registered.
+Friendship created.
+Friends list:
+Bruno; bruno@gmail.com
+Friends list:
+Ana; ana@gmail.com
+Bom dia mundo!
+Invalid friendship.
+Status updated.
+Boa tarde!
+Friendship already exists.
+Not registered.
+Not registered.
+Successfully registered.
+Friendship created.
+Friendship already exists.
+List of registered users:
+Ana; ana@gmail.com
+Bruno; bruno@gmail.com
+Carlos; carlos@gmail.com
+Friends list:
+Bruno; bruno@gmail.com
+Carlos; carlos@gmail.com
+Bye.

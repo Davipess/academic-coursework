@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 10</title>
+    <style>
+        body{font-family:Arial,sans-serif;max-width:860px;margin:40px auto;padding:0 20px;line-height:1.6}
+        pre{background:#f5f5f5;border:1px solid #ddd;padding:12px;overflow-x:auto;border-radius:4px}
+        code{font-family:monospace}
+        .spec{background:#f0f8ff;border-left:4px solid #2196F3;padding:12px;margin:12px 0}
+        .lang-notice{
+            background:#fff3cd;
+            color:#856404;
+            padding:12px 16px;
+            border:2px solid #ffc107;
+            border-radius:4px;
+            font-size:1.1em;
+            font-weight:bold;
+            margin:16px 0;
+            text-align:center
+        }
+        .separator{
+            border-top:3px dashed #999;
+            margin:40px 0;
+            padding:20px 0;
+            text-align:center;
+            color:#666;
+            font-weight:bold;
+            font-size:1.2em
+        }
+        .separator::before{
+            content:'✦ ENGLISH VERSION BELOW ✦';
+        }
+    </style>
+</head>
+<body>
+
+<div class="lang-notice">English below</div>
+
+<h2>Exercício 10</h2>
+
+<p>Implemente a seguinte função em linguagem assembly RISC-V:</p>
+
+<div class="spec">
+<p><strong>Descrição:</strong> Return the larger of two values a0 and a1.</p>
+<p><strong>Entrada:</strong> a0, a1, a2 (ver especificação)</p>
+<p><strong>Saída:</strong> a0 (Minimum of a0 and a1)</p>
+</div>
+
+<h3>Requisitos de Implementação</h3>
+
+<ul>
+    <li>Implemente a função com o rótulo <code>func_10:</code></li>
+    <li>Siga a convenção de chamada RISC-V (argumentos em a0, a1, a2; valor de retorno em a0)</li>
+    <li>Não modifique o rótulo da função ou esta especificação</li>
+    <li>Use apenas instruções RISC-V padrão ou pseudo-instruções</li>
+</ul>
+
+<h3>Modelo</h3>
+
+<p>Pode usar o modelo abaixo no seu ficheiro de solução. O ficheiro <code>_main_test.s</code> contém casos de teste para verificação local.</p>
+
+<pre><code># Exercise 10: Return the larger of two values a0 and a1.
+#
+# Input:  a0 (and possibly a1, a2 - see spec)
+# Output: a0 (Minimum of a0 and a1)
+#
+# Do not modify this spec comment. Implement the function below.
+
+
+.text
+main:
+    # Test: a0 larger: max(7,3)=7
+    li a0, 7
+    li a1, 3
+    jal ra, func_10
+    li a7, 1
+    ecall
+    li a7, 10
+    ecall
+
+# ============================================================
+# TODO: Implement the function below
+# ============================================================
+
+.text
+.global func_10
+func_10:
+    # TODO: Implement the function
+    ret
+</code></pre>
+
+<h3>Notas de Submissão</h3>
+
+<ul>
+    <li>Na submissão ao Mooshak pode incluir o seu ficheiro completo, com a sua função de teste.</li>
+    <li>Certifique-se de que o rótulo da função corresponde ao número do exercício</li>
+    <li>Teste localmente usando o fornecedor de testes antes de submeter</li>
+</ul>
+
+<div class="separator"></div>
+
+<h2>Exercise 10</h2>
+
+<p>Implement the following function in RISC-V assembly language:</p>
+
+<div class="spec">
+<p><strong>Description:</strong> Return the larger of two values a0 and a1.</p>
+<p><strong>Input:</strong> a0 (and possibly a1, a2 - see spec)</p>
+<p><strong>Output:</strong> a0 (Minimum of a0 and a1)</p>
+</div>
+
+<h3>Implementation Requirements</h3>
+
+<ul>
+    <li>Implement the function with label <code>func_10:</code></li>
+    <li>Follow the RISC-V calling convention (arguments in a0, a1, a2; return value in a0)</li>
+    <li>Do not modify the function label or this specification</li>
+    <li>Use only standard RISC-V instructions or pseudo-instructions</li>
+</ul>
+
+<h3>Template</h3>
+
+<p>You may use the template below in your solution file. The <code>_main_test.s</code> file contains test cases for local verification.</p>
+
+<pre><code># Exercise 10: Return the larger of two values a0 and a1.
+#
+# Input:  a0 (and possibly a1, a2 - see spec)
+# Output: a0 (Minimum of a0 and a1)
+#
+# Do not modify this spec comment. Implement the function below.
+
+
+.text
+main:
+    # Test: a0 larger: max(7,3)=7
+    li a0, 7
+    li a1, 3
+    jal ra, func_10
+    li a7, 1
+    ecall
+    li a7, 10
+    ecall
+
+# ============================================================
+# TODO: Implement the function below
+# ============================================================
+
+.text
+.global func_10
+func_10:
+    # TODO: Implement the function
+    ret
+</code></pre>
+
+<h3>Submission Notes</h3>
+
+<ul>
+    <li>When submitting to Mooshak you can include your complete file with your test function.</li>
+    <li>Ensure the function label matches the exercise number</li>
+    <li>Test locally using the provided test harness before submitting</li>
+</ul>
+
+</body>
+</html>

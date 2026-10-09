@@ -1,0 +1,20 @@
+# Byte-compiled / object / binary files
+*.class
+*.o
+*.obj
+*.exe
+bin/
+out/
+target/
+
+# IDE & Editor files
+.idea/
+.vscode/
+*.iml
+.project
+.classpath
+.settings/
+
+# OS files
+.DS_Store
+Thumbs.db

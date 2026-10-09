@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.ac.ALUTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-09T11:53:12.316Z" hostname="DAVIDFIGUEIREDO" time="0.019">
+  <properties/>
+  <testcase name="add()" classname="org.ac.ALUTest" time="0.014"/>
+  <testcase name="and()" classname="org.ac.ALUTest" time="0.001"/>
+  <testcase name="lsl()" classname="org.ac.ALUTest" time="0.001"/>
+  <testcase name="not()" classname="org.ac.ALUTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

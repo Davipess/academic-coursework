@@ -1,0 +1,29 @@
+USERS
+REGISTER
+Joao
+joao@gmail.com
+Eu sou o Joao!
+REGISTER
+Joao
+joao@gmail.com
+Eu sou o Joaozinho!
+CHECKSTATUS
+Joao
+REGISTERED
+Joao
+FRIENDS
+Joao
+REGISTERED
+Joana
+FRIENDS
+Joao
+CHECKFRIENDSHIP
+Joao
+Joana
+CHECKFRIENDSHIP
+Joana
+Joao
+CHECKFRIENDSHIP
+Joana
+Rogerio
+QUIT

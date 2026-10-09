@@ -1,0 +1,43 @@
+USERS
+REGISTER
+Ana
+ana@gmail.com
+Bom dia mundo!
+ADDFRIEND
+Ana
+Bruno
+FRIENDS
+Ana
+REGISTER
+Bruno
+bruno@gmail.com
+A trabalhar...
+REGISTERED
+Bruno
+ADDFRIEND
+Ana
+Bruno
+REGISTER
+Jorge
+jorge@gmail.com
+Boa tarde!
+ADDFRIEND
+Jorge
+Bruno
+NEWSTATUS
+Bruno
+A estudar
+CHECKSTATUS
+Ana
+CHECKSTATUS
+Bruno
+CHECKSTATUS
+Jorge
+USERS
+FRIENDS
+Ana
+FRIENDS
+Bruno
+FRIENDS
+Jorge
+QUIT

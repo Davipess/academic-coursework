@@ -1,0 +1,214 @@
+@startuml
+top to bottom direction
+skinparam linetype ortho
+skinparam packageStyle frame
+skinparam nodesep 50
+skinparam ranksep 80
+
+package "Main & System" {
+    class Main{
+    + {static} main(args: String[])
+    - {static} executeCommand(sc: Scanner, yv: YouVideo)
+    }
+    interface YouVideo{
+    + isInvalidCode(code: String): boolean
+    + isInvalidDuration(duration: int): boolean
+    + createPublishableVideo(id, duration, url, publisher, title, code)
+    + createPublishablePremiumVideo
+    (id, duration, url, publisher, tittle, code, subtitleUrl, subtitleCode)
+    + isExistingVideo(videoId: String): boolean
+    + isPremiumVideo(videoId: String): boolean
+    + addSubtitle(videoId, subtitleUrl, subtitleCode)
+    + getVideo(videoId: String): Video
+    + subtitleIterator(videoId: String): Iterator<Subtitle>
+    + isExistingPodcast(title: String): boolean
+    + createPodcast(title, author, code)
+    + isExistingEpisode(id: String): boolean
+    + isDateEarlier(podcast, date): boolean
+    + addEpisode(title, id, duration, url, date)
+    + getPodcast(title: String): Podcast
+    + hasEpisodes(title: String): boolean
+    + getAuthor(name: String): Author
+    + listAuthorPodcasts(author: Author): Iterator<Podcast>
+    + removePodcast(title: String)
+    + createShow(author, videoId, date)
+    + getShow(title: String): Show
+    + removeShow(title: String)
+    + isShow(videoId: String): boolean
+    + isExistingShow(title: String): boolean
+    + removeVideo(videoId: String)
+    + getPodcastEpisodes(title: String): Iterator<Episode>
+                          }
+    class YouVideoClass
+
+    Main -down-> YouVideo : uses
+    YouVideo <|.down. YouVideoClass : implements
+}
+
+package "Collections" {
+    interface AuthorCollection{
+    + getAuthor(name: String): Author
+    + addAuthor(name: String)
+    + isAuthorExistant(name: String): boolean
+    + createShow(author, date, video)
+    + removeShow(title: String)
+    + getShow(title: String): Show
+    + isShow(video: Video): boolean
+    + isExistingShow(title: String): boolean
+    + authorHasPodcasts(name: String): boolean
+    + podcastIterator(author: Author): Iterator<Podcast>
+                                  }
+    class AuthorCollectionClass{
+    - authors: Array<Author>
+    - shows: Array<Show>
+                                   }
+    interface PodcastCollection{
+    + createPodcast(title, author, code)
+    + isExistingPodcast(title: String): boolean
+    + getPodcast(title: String): Podcast
+    + isExistingEpisode(id: String): boolean
+    + isDateEarlier(podcast, date): boolean
+    + hasEpisodes(title: String): boolean
+    + getPodcastEpisodes(title: String): Iterator<Episode>
+    + removePodcast(podcast: Podcast)
+                                   }
+    class PodcastCollectionClass{
+    - podcasts: Array<Podcast>
+                                    }
+    interface PublishableCollection{
+    + isValidCode(code: String): boolean
+    + isValidDuration(dur: int): boolean
+    + isExistingVideo(id: String): boolean
+    + createPublishable(id, dur, url, pub, tit, cod)
+    + createPremium(id, dur, url, pub, tit, cod, sUrl, sCod)
+    + isPremiumVideo(id: String): boolean
+    + addSubtitle(id, url, cod)
+    + getVideo(id: String): Video
+    + removeVideo(id: String)
+                                       }
+    class PublishableCollectionClass{
+    - videos: Array<Video>
+                                        }
+    interface ShowCollection{
+    + createShow(authorName: String, transmissionDate: String, video: Video)
+    + removeShow(showTitle: String)
+    + getShow(showTitle: String): Show
+    + isShow(video: Video): boolean
+    + isExistingShow(showTitle: String): boolean
+    }
+    class ShowCollectionClass{
+    - shows: Array<Show>
+    }
+
+    ShowCollection <|.down. ShowCollectionClass : implements
+    AuthorCollection <|.down. AuthorCollectionClass : implements
+    PodcastCollection <|.down. PodcastCollectionClass : implements
+    PublishableCollection <|.down. PublishableCollectionClass : implements
+
+    YouVideoClass -down-> AuthorCollection : uses
+    YouVideoClass -down-> PodcastCollection :  uses
+    YouVideoClass -down-> PublishableCollection :  uses
+    YouVideoClass -down-> ShowCollection :  uses
+}
+
+package "Objects" {
+    interface Video{
+
+    }
+    interface Video {
+            + getId(): String
+            + getDuration(): int
+            + getUrl(): String
+        }
+        interface Publishable {
+            + getPublisher(): String
+            + getTitle(): String
+            + getCode(): String
+        }
+        abstract class AbstractVideo {
+            - id: String
+            - url: String
+            - duration: int
+        }
+        abstract class AbstractPublishable {
+            - publisher: String
+            - title: String
+            - code: String
+        }
+        class BasicVideoClass
+        class PremiumVideoClass {
+            - subtitles: Array<Subtitle>
+            + addSubtitle(url, code)
+            + getSubtitles(): Iterator<Subtitle>
+        }
+        interface Episode {
+            + getDate(): String
+        }
+        class EpisodeClass {
+            - date: String
+        }
+
+    Video <|.down. AbstractVideo
+    Publishable <|.down. AbstractPublishable
+    AbstractVideo <|-down- AbstractPublishable
+    AbstractPublishable <|-down- BasicVideoClass
+    AbstractPublishable <|-down- PremiumVideoClass
+    AbstractVideo <|-down- EpisodeClass
+    Episode <|.down. EpisodeClass
+
+interface Author {
+        + getName(): String
+        + hasPodcasts(): boolean
+        + addPodcast(pod: Podcast)
+        + removePodcast(pod: Podcast)
+        + addShow(show: Show)
+        + removeShow(show: Show)
+        + podcastIterator(): Iterator<Podcast>
+    }
+    class AuthorClass {
+        - name: String
+        - pods: Array<Podcast>
+        - shows: Array<Show>
+    }
+    interface Podcast {
+        + getTitle(): String
+        + getAuthor(): String
+        + getCode(): String
+        + addEpisode(id, dur, url, date)
+        + getLastEpisode(): Episode
+        + isDateEarlier(date: String): boolean
+        + getEpisodes(): Iterator<Episode>
+        + hasEpisodes(): boolean
+    }
+    class PodcastClass {
+        - episodes: Array<Episode>
+    }
+    class ReverseIteratorClass
+    interface Show {
+        + authorName(): String
+        + transmissionDate(): String
+        + video(): Video
+        + getShowTitle(): String
+    }
+    class ShowClass <<record>>
+    Author <|.down. AuthorClass
+    Podcast <|.down. PodcastClass
+    Show <|.down. ShowClass
+
+    interface Subtitle
+    class SubtitleClass <<record>>
+    Subtitle <|.down. SubtitleClass
+
+}
+
+PublishableCollectionClass o-down-> Video
+PodcastCollectionClass o-down-> Podcast
+AuthorCollectionClass o-down-> Author
+ShowCollectionClass o-down-> Show
+
+PodcastClass "1" o-down-> "*" Episode
+PodcastClass -down-> ReverseIteratorClass: uses
+AuthorClass "1" o-down-> "*" Podcast
+AuthorClass "1" o-down-> "*" Show
+PremiumVideoClass "1" o-down-> "*" Subtitle
+@enduml

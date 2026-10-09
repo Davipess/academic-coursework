@@ -1,0 +1,237 @@
+@startuml
+top to bottom direction
+skinparam linetype ortho
+skinparam packageStyle frame
+skinparam nodesep 50
+skinparam ranksep 80
+
+package "Main & System" {
+    class Main{
+    + {static} main(args: String[])
+    - {static} executeCommand(sc: Scanner, yv: YouVideo)
+    }
+
+    interface YouVideo{
+    + createPublishableVideo(...)
+    + createPublishablePremiumVideo(...)
+    + isExistingVideo(id: String): boolean
+    + addSubtitle(videoId, subtitleUrl, subtitleLanguage)
+    + getVideo(videoId: String): Video
+    + subtitleIterator(video: Video): Iterator<Subtitle>
+    + createPodcast(title, author, code)
+    + addEpisode(title, id, duration, url, date)
+    + getPodcast(title: String): Podcast
+    + getAuthor(name: String): Author
+    + listAuthorPodcasts(authorName: String): Iterator<PodcastGetters>
+    + removePodcast(title: String)
+    + createShow(authorName, videoId, transmissionDate)
+    + getShow(showTitle: String): Show
+    + removeShow(showTitle: String)
+    + isExistingShow(showTitle: String): boolean
+    + removeVideo(videoId: String)
+    + getPodcastEpisodes(title: String): Iterator<Episode>
+    + hasProductiveAuthors(): boolean
+    + getAuthorsByProductivity(): Iterator<AuthorGetters>
+    + addTag(title: String, tagName: String)
+    + removeTag(title: String, tagName: String)
+    + contentIterator(tagName, contentType, order): Iterator<ContentGetters>
+    }
+
+    class YouVideoClass
+
+    Main -down-> YouVideo : uses
+    YouVideo <|.down. YouVideoClass : implements
+}
+
+package "Collections" {
+    interface AuthorCollection
+    class AuthorCollectionClass {
+        - authors: HashMap<String, Author>
+    }
+
+    interface PodcastCollection
+    class PodcastCollectionClass {
+        - podcasts: HashMap<String, Podcast>
+    }
+
+    interface PublishableCollection
+    class PublishableCollectionClass {
+        - videos: HashMap<String, Video>
+    }
+
+    interface ShowCollection
+    class ShowCollectionClass {
+        - shows: HashMap<String, Show>
+    }
+
+    interface TagCollection {
+        + addTag(tagName: String, content: Content)
+        + removeTag(tagName: String, content: Content)
+        + contentIterator(tagName, contentType, order): Iterator<ContentGetters>
+    }
+    class TagCollectionClass {
+        - taggedContent: HashMap<Tag, SortedSet<ContentGetters>>
+        - taggedPodcasts: HashMap<Tag, SortedSet<ContentGetters>>
+        - taggedShows: HashMap<Tag, SortedSet<ContentGetters>>
+    }
+
+    ShowCollection <|.down. ShowCollectionClass : implements
+    AuthorCollection <|.down. AuthorCollectionClass : implements
+    PodcastCollection <|.down. PodcastCollectionClass : implements
+    PublishableCollection <|.down. PublishableCollectionClass : implements
+    TagCollection <|.down. TagCollectionClass : implements
+
+    YouVideoClass -down-> AuthorCollection : uses
+    YouVideoClass -down-> PodcastCollection : uses
+    YouVideoClass -down-> PublishableCollection : uses
+    YouVideoClass -down-> ShowCollection : uses
+    YouVideoClass -down-> TagCollection : uses
+}
+
+package "Objects" {
+
+    ' --- TAGS ---
+    interface Tag {
+        + name(): String
+    }
+    class TagClass
+    Tag <|.down. TagClass : implements
+
+    ' --- CONTENT HIERARCHY ---
+    interface ContentGetters {
+        + getTitle(): String
+        + getAuthor(): String
+        + getTags(): Iterator<Tag>
+        + isTagged(): boolean
+        + hasTag(tagName: String): boolean
+    }
+    interface Content {
+        + addTag(tag: Tag)
+        + removeTag(tag: Tag)
+    }
+    abstract class AbstractContent {
+        - tags: SortedSet<Tag>
+    }
+
+    ContentGetters <|-down- Content : extends
+    Content <|.down. AbstractContent : implements
+
+    ' --- PODCASTS & SHOWS ---
+    interface PodcastGetters {
+        + getCode(): String
+        + getEpisodes(): Iterator<Episode>
+        + hasEpisodes(): boolean
+    }
+    interface Podcast {
+        + addEpisode(...)
+    }
+    class PodcastClass {
+        - episodes: SortedSet<Episode>
+    }
+
+    interface ShowGetters {
+        + transmissionDate(): LocalDate
+        + video(): Video
+    }
+    interface Show
+    class ShowClass {
+        - date: LocalDate
+    }
+
+    ContentGetters <|-down- PodcastGetters : extends
+    ContentGetters <|-down- ShowGetters : extends
+    Content <|-down- Podcast : extends
+    Content <|-down- Show : extends
+    PodcastGetters <|-down- Podcast : extends
+    ShowGetters <|-down- Show : extends
+
+    AbstractContent <|-down- PodcastClass : extends
+    Podcast <|.down. PodcastClass : implements
+    AbstractContent <|-down- ShowClass : extends
+    Show <|.down. ShowClass : implements
+
+    ' --- AUTHORS ---
+    interface AuthorGetters {
+        + getName(): String
+        + getPodcasts(): Iterator<PodcastGetters>
+        + getShows(): Iterator<ShowGetters>
+        + hasPodcasts(): boolean
+    }
+    interface Author {
+        + addPodcast(pod: Podcast)
+        + removePodcast(pod: Podcast)
+        + addShow(show: Show)
+        + removeShow(show: Show)
+    }
+    class AuthorClass {
+        - name: String
+        - pods: SortedSet<Podcast>
+        - shows: SortedSet<Show>
+    }
+
+    AuthorGetters <|-down- Author : extends
+    Author <|.down. AuthorClass : implements
+
+    ' --- VIDEOS ---
+    interface Video {
+        + getId(): String
+        + getDuration(): int
+        + getUrl(): String
+    }
+    interface Publishable {
+        + getPublisher(): String
+        + getTitle(): String
+        + getCode(): String
+    }
+    abstract class AbstractVideo
+    abstract class AbstractPublishable
+    class BasicVideoClass
+
+    interface PremiumVideoGetters {
+        + getSubtitles(): Iterator<Subtitle>
+    }
+    interface PremiumVideo {
+        + addSubtitle(url, code)
+    }
+    class PremiumVideoClass {
+        - subtitles: List<Subtitle>
+    }
+
+    interface Episode {
+        + getDate(): LocalDate
+    }
+    class EpisodeClass
+
+    interface Subtitle
+    class SubtitleClass
+
+    Video <|.down. AbstractVideo : implements
+    Publishable <|.down. AbstractPublishable : implements
+    AbstractVideo <|-down- AbstractPublishable : extends
+    AbstractPublishable <|-down- BasicVideoClass : extends
+
+    AbstractPublishable <|-down- PremiumVideoClass : extends
+    Publishable <|-down- PremiumVideoGetters : extends
+    PremiumVideoGetters <|-down- PremiumVideo : extends
+    PremiumVideo <|.down. PremiumVideoClass : implements
+
+    AbstractVideo <|-down- EpisodeClass : extends
+    Episode <|.down. EpisodeClass : implements
+    Subtitle <|.down. SubtitleClass : implements
+}
+
+' --- RELATIONS (AGGREGATIONS) ---
+PublishableCollectionClass o-down-> Video : contains
+PodcastCollectionClass o-down-> Podcast : contains
+AuthorCollectionClass o-down-> Author : contains
+ShowCollectionClass o-down-> Show : contains
+TagCollectionClass o-down-> Tag : contains
+TagCollectionClass o-down-> Content : contains
+
+AbstractContent "1" o-down-> "*" Tag : contains
+PodcastClass "1" o-down-> "*" Episode : contains
+AuthorClass "1" o-down-> "*" Podcast : contains
+AuthorClass "1" o-down-> "*" Show : contains
+PremiumVideoClass "1" o-down-> "*" Subtitle : contains
+ShowClass "1" o-down-> "1" Video : contains
+@enduml

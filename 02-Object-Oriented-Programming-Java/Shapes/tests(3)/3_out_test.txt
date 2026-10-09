@@ -1,0 +1,21 @@
+A new CIRCLE was added.
+A new RECTANGLE was added.
+A new RECTANGLE was added.
+A new CIRCLE was added.
+A new RECTANGLE was added.
+A new CIRCLE was added.
+circle2 (4, 2) CIRCLE
+A new CIRCLE was added.
+A new CIRCLE was added.
+circle5 (0, 0) CIRCLE
+A new RECTANGLE was added.
+A new RECTANGLE was added.
+rectangle6 (-2, -3) RECTANGLE
+Type does not exist.
+All shapes:
+circle1 (0, 0) CIRCLE
+circle2 (4, 2) CIRCLE
+circle3 (-1, 0) CIRCLE
+circle4 (3, 4) CIRCLE
+circle5 (0, 0) CIRCLE
+Exiting...

@@ -1,0 +1,8 @@
+Empty social network.
+Successfully registered.
+Status updated.
+Eu nao sou o Joao!
+Invalid friendship.
+Successfully registered.
+Eu sou o Joao Pinto e estou a testar se as pessoas podem ter mais do que um nome!
+Bye.

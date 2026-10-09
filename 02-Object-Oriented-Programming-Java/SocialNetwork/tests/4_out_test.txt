@@ -1,0 +1,23 @@
+Empty social network.
+Successfully registered.
+List of registered users:
+Ze; ze@gmail.com
+Successfully registered.
+List of registered users:
+Ze; ze@gmail.com
+Maria; maria@gmail.com
+Not registered.
+Already registered.
+Friendship created.
+Friends list:
+Maria; maria@gmail.com
+Com sono
+Status updated.
+Successfully registered.
+Friendship created.
+Friends list:
+Maria; maria@gmail.com
+Ambrosio; ambrosio@gmail.com
+Non-existent friendship.
+Friendship already exists.
+Bye.
