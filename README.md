@@ -1,5 +1,5 @@
 # 🎓 Academic Coursework — Computer Science Foundations
-**BSc in Computer Science | FCT NOVA** (2024 – Present)
+**BSc in Computer Science | FCT NOVA** (2025 – Present)
 
 This repository contains practical projects, laboratory assignments, and exercises developed during my Computer Science degree, focusing on core programming paradigms, software design, and low-level computer systems.
 
@@ -31,7 +31,7 @@ This repository contains practical projects, laboratory assignments, and exercis
 <summary><b>🇵🇹 Versão em Português</b></summary>
 
 ### 🎓 Trabalhos Curriculares — Fundamentos de Engenharia Informática
-**Licenciatura em Engenharia Informática | FCT NOVA** (2024 – Presente)
+**Licenciatura em Engenharia Informática | FCT NOVA** (2025 – Presente)
 
 Este repositório reúne os projetos práticos e exercícios desenvolvidos ao longo da licenciatura, com foco em paradigmas de programação, desenho orientado a objetos e sistemas de baixo nível.
 
